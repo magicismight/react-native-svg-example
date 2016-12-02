@@ -178,7 +178,6 @@ class TextClipping extends Component{
                 fill="red"
                 fontSize="22"
                 fontWeight="bold"
-                fill="red"
                 stroke="blue"
                 textAnchor="middle"
                 clipPath="url(#clip)"
