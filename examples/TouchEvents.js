@@ -7,6 +7,8 @@ import Svg, {
     Path,
     Rect,
     G,
+    ClipPath,
+    Defs,
     Text
 } from 'react-native-svg';
 
@@ -56,9 +58,15 @@ class HoverExample extends Component {
 
     render () {
         return <Svg height="120" width="120">
+            <Defs>
+                <ClipPath id="clip">
+                    <Circle cx="50%" cy="50%" r="40" />
+                </ClipPath>
+            </Defs>
             <G>
-                <G>
+                <G clipPath="url(#clip)">
                     <Path
+
                         d="M50,5L20,99L95,39L5,39L80,99z"
                         stroke={this.state.hover ? 'rgba(10, 10, 10, 0.5)' : 'black'}
                         fill={this.state.hover ? 'pink' : 'red'}
@@ -89,7 +97,7 @@ class GroupExample extends Component {
                 <G scale="1.4">
                     <G>
                         <Circle cx="80" cy="80" r="30" fill="green" x="20" scale="1.2"/>
-                        <Text fontWeight="bold" fontSize="40" x="100" y="100" scale="2" onPress={() => alert('Pressed on Text')}>H</Text>
+                        <Text fontWeight="bold" fontSize="40" x="100" y="100" onPress={() => alert('Pressed on Text')}>H</Text>
                         <Rect x="20" y="20" width="40" height="40" fill="yellow" />
                     </G>
                 </G>
