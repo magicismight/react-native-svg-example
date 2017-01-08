@@ -7,7 +7,9 @@ import Svg, {
     Path,
     Rect,
     G,
-    Text
+    Text,
+    ClipPath,
+    Defs
 } from 'react-native-svg';
 
 class PressExample extends Component {
@@ -56,10 +58,16 @@ class HoverExample extends Component {
 
     render () {
         return <Svg height="120" width="120">
+            <Defs>
+                <ClipPath id="clip">
+                    <Circle r="30" cx="50%" cy="50%"/>
+                </ClipPath>
+            </Defs>
             <G>
                 <G>
                     <Path
                         d="M50,5L20,99L95,39L5,39L80,99z"
+                        clipPath="url(#clip)"
                         stroke={this.state.hover ? 'rgba(10, 10, 10, 0.5)' : 'black'}
                         fill={this.state.hover ? 'pink' : 'red'}
                         strokeWidth="6"
@@ -104,7 +112,7 @@ const icon = <Svg
     width="20"
 >
     <Circle fill="#ccc" stroke="#000" cx="11.1" cy="4.4" r="2.6"/>
-    <Path fill="#fff" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
+    <Path fill="#fff" stroke="#000" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
           c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v0.7V10 M8.1,8.8c0,0,0-0.1,0-0.2
 	c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v1.9 M10.1,7.5v-2c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4
 	c0.2-0.4,0.5-0.6,0.9-0.7c0.4,0,0.7,0.2,0.9,0.7C12,5,12,5.2,12,5.4c0,0.1,0,0.1,0,0.2v6c1.4-1.8,2.4-1.8,2.8,0.1

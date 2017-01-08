@@ -100,7 +100,7 @@ const icon = <Svg
         <Polyline points="14,2 16,5 14,8" />
         <Polyline points="7,3 10,1 13,3" />
     </G>
-    <Path fill="#fff" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
+    <Path fill="#fff" stroke="#000" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
           c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v0.7V10 M8.1,8.8c0,0,0-0.1,0-0.2
 	c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v1.9 M10.1,7.5v-2c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4
 	c0.2-0.4,0.5-0.6,0.9-0.7c0.4,0,0.7,0.2,0.9,0.7C12,5,12,5.2,12,5.4c0,0.1,0,0.1,0,0.2v6c1.4-1.8,2.4-1.8,2.8,0.1

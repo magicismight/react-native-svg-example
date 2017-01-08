@@ -12,7 +12,8 @@ import Svg, {
     Ellipse,
     G,
     Polygon,
-    Circle
+    Circle,
+    Path
 } from 'react-native-svg';
 
 class ClipPathAttr extends Component{
@@ -35,6 +36,9 @@ class ClipPathAttr extends Component{
                         stopOpacity="1"
                     />
                 </RadialGradient>
+                <ClipPath id="clip">
+                    <Path d="M50,5L20,99L95,39L5,39L80,99z" />
+                </ClipPath>
             </Defs>
             <Circle
                 cx="50"
@@ -48,7 +52,7 @@ class ClipPathAttr extends Component{
                 width="100"
                 height="100"
                 fill="url(#grad)"
-                clipPath="M50,5L20,99L95,39L5,39L80,99z"
+                clipPath="url(#clip)"
             />
             <Rect
                 x="40%"
@@ -68,8 +72,13 @@ class ClipRule extends Component{
             height="100"
             width="100"
         >
+            <Defs>
+                <ClipPath id="clip">
+                    <Path d="M50,5L20,99L95,39L5,39L80,99z" />
+                </ClipPath>
+            </Defs>
             <G
-                clipPath="M50,5L20,99L95,39L5,39L80,99z"
+                clipPath="url(#clip)"
                 clipRule="evenodd"
             >
                 <Rect
@@ -179,6 +188,7 @@ class TextClipping extends Component{
                 fontSize="22"
                 fontWeight="bold"
                 stroke="blue"
+                strokeWidth="1"
                 textAnchor="middle"
                 clipPath="url(#clip)"
             >NOT THE FACE</Text>
@@ -190,8 +200,14 @@ const icon = <Svg
     height="20"
     width="20"
 >
+    <Defs>
+        <ClipPath id="clip">
+            <Path d="M50,5L20,99L95,39L5,39L80,99z" />
+        </ClipPath>
+    </Defs>
+
     <G
-        clipPath="M50,5L20,99L95,39L5,39L80,99z"
+        clipPath="url(#clip)"
         clipRule="evenodd"
         scale="0.2"
     >
