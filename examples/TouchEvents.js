@@ -7,9 +7,9 @@ import Svg, {
     Path,
     Rect,
     G,
+    Text,
     ClipPath,
-    Defs,
-    Text
+    Defs
 } from 'react-native-svg';
 
 class PressExample extends Component {
@@ -60,14 +60,14 @@ class HoverExample extends Component {
         return <Svg height="120" width="120">
             <Defs>
                 <ClipPath id="clip">
-                    <Circle cx="50%" cy="50%" r="40" />
+                    <Circle r="30" cx="50%" cy="50%"/>
                 </ClipPath>
             </Defs>
             <G>
-                <G clipPath="url(#clip)">
+                <G>
                     <Path
-
                         d="M50,5L20,99L95,39L5,39L80,99z"
+                        clipPath="url(#clip)"
                         stroke={this.state.hover ? 'rgba(10, 10, 10, 0.5)' : 'black'}
                         fill={this.state.hover ? 'pink' : 'red'}
                         strokeWidth="6"
@@ -97,7 +97,7 @@ class GroupExample extends Component {
                 <G scale="1.4">
                     <G>
                         <Circle cx="80" cy="80" r="30" fill="green" x="20" scale="1.2"/>
-                        <Text fontWeight="bold" fontSize="40" x="100" y="100" onPress={() => alert('Pressed on Text')}>H</Text>
+                        <Text fontWeight="bold" fontSize="40" x="100" y="100" scale="2" onPress={() => alert('Pressed on Text')}>H</Text>
                         <Rect x="20" y="20" width="40" height="40" fill="yellow" />
                     </G>
                 </G>
@@ -112,7 +112,7 @@ const icon = <Svg
     width="20"
 >
     <Circle fill="#ccc" stroke="#000" cx="11.1" cy="4.4" r="2.6"/>
-    <Path fill="#fff" stroke="#000" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
+    <Path fill="#fff" stroke="#000" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" d={`M6.2,9.4
           c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v0.7V10 M8.1,8.8c0,0,0-0.1,0-0.2
 	c0-0.2,0.1-0.3,0.1-0.4c0.2-0.4,0.5-0.7,1-0.7c0.3,0,0.5,0,0.6,0h0.1v1.9 M10.1,7.5v-2c0,0,0-0.1,0-0.2c0-0.2,0.1-0.3,0.1-0.4
 	c0.2-0.4,0.5-0.6,0.9-0.7c0.4,0,0.7,0.2,0.9,0.7C12,5,12,5.2,12,5.4c0,0.1,0,0.1,0,0.2v6c1.4-1.8,2.4-1.8,2.8,0.1

@@ -19,7 +19,7 @@ class StrokeExample extends Component{
     static title = 'The stroke property defines the color of a line, text or outline of an element';
     render() {
         return <Svg height="80" width="225">
-            <G>
+            <G strokeWidth="1">
                 <Path stroke="red" d="M5 20 l215 0" />
                 <Path stroke="black" d="M5 40 l215 0" />
                 <Path stroke="blue" d="M5 60 l215 0" />

@@ -98,6 +98,7 @@ class GTransform extends Component{
                     x2="140"
                     y2="10"
                     stroke="#060"
+                    strokeWidth="1"
                 />
 
                 <Rect
@@ -106,6 +107,7 @@ class GTransform extends Component{
                     height="50"
                     width="80"
                     stroke="#060"
+                    strokeWidth="1"
                     fill="#060"
                 />
 
@@ -113,6 +115,7 @@ class GTransform extends Component{
                     x="100"
                     y="75"
                     stroke="#600"
+                    strokeWidth="1"
                     fill="#600"
                     textAnchor="middle"
                 >

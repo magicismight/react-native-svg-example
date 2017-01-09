@@ -60,6 +60,13 @@ class ClipPathElement extends Component{
                 fill="url(#grad)"
                 clipPath="url(#clip)"
             />
+            <Rect
+                x="40%"
+                y="0"
+                width="20%"
+                height="20%"
+                fill="pink"
+            />
         </Svg>;
     }
 }
@@ -73,7 +80,7 @@ class ClipRule extends Component{
         >
             <Defs>
                 <ClipPath id="clip">
-                    <Path d="M50,5L20,99L95,39L5,39L80,99z"/>
+                    <Path d="M50,5L20,99L95,39L5,39L80,99z" />
                 </ClipPath>
             </Defs>
             <G
@@ -143,6 +150,7 @@ class TextClipping extends Component{
                 fontSize="22"
                 fontWeight="bold"
                 stroke="blue"
+                strokeWidth="1"
                 textAnchor="middle"
                 clipPath="url(#clip)"
             >NOT THE FACE</Text>
@@ -156,9 +164,10 @@ const icon = <Svg
 >
     <Defs>
         <ClipPath id="clip">
-            <Path d="M50,5L20,99L95,39L5,39L80,99z"/>
+            <Path d="M50,5L20,99L95,39L5,39L80,99z" />
         </ClipPath>
     </Defs>
+
     <G
         clipPath="url(#clip)"
         clipRule="evenodd"

@@ -41,6 +41,7 @@ class UnclosedPath extends Component{
                 d="M25 10 L98 65 L70 25 L16 77 L11 30 L0 4 L90 50 L50 10 L11 22 L77 95 L20 25"
                 fill="none"
                 stroke="red"
+                strokeWidth="1"
             />
         </Svg>;
     }
@@ -110,6 +111,7 @@ const icon = <Svg
     <Path
         d="M5 0 L8 10 L10 15 L18 2 L4 18 L5 14 L10 10 Z"
         stroke="red"
+        strokeWidth="1"
         fill="none"
     />
 </Svg>;

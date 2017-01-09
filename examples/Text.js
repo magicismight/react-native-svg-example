@@ -109,6 +109,7 @@ class TextFill extends Component{
             <Text
                 fill="url(#grad)"
                 stroke="purple"
+                strokeWidth="1"
                 fontSize="20"
                 fontWeight="bold"
                 x="100"
@@ -201,6 +202,7 @@ const icon = <Svg
         textAnchor="middle"
         fill="none"
         stroke="blue"
+        strokeWidth="1"
     >字</Text>
 </Svg>;
 
