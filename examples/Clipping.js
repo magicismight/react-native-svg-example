@@ -60,13 +60,6 @@ class ClipPathElement extends Component{
                 fill="url(#grad)"
                 clipPath="url(#clip)"
             />
-            <Rect
-                x="40%"
-                y="0"
-                width="20%"
-                height="20%"
-                fill="pink"
-            />
         </Svg>;
     }
 }
