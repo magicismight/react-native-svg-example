@@ -111,7 +111,6 @@ const icon = <Svg
     <Path
         d="M5 0 L8 10 L10 15 L18 2 L4 18 L5 14 L10 10 Z"
         stroke="red"
-        strokeWidth="1"
         fill="none"
     />
 </Svg>;

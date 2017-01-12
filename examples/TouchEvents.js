@@ -97,7 +97,7 @@ class GroupExample extends Component {
                 <G scale="1.4">
                     <G>
                         <Circle cx="80" cy="80" r="30" fill="green" x="20" scale="1.2"/>
-                        <Text fontWeight="bold" fontSize="40" x="100" y="100" scale="2" onPress={() => alert('Pressed on Text')}>H</Text>
+                        <Text fontWeight="bold" fontSize="40" x="50" y="10" scale="2" onPress={() => alert('Pressed on Text')}>H</Text>
                         <Rect x="20" y="20" width="40" height="40" fill="yellow" />
                     </G>
                 </G>

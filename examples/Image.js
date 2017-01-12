@@ -18,7 +18,6 @@ class ImageExample extends Component{
         return <Svg
             height="100"
             width="100"
-            style={{backgroundColor: 'red'}}
         >
             <Defs>
                 <ClipPath id="clip">
@@ -26,11 +25,19 @@ class ImageExample extends Component{
                 </ClipPath>
             </Defs>
             <Rect
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                fill="red"
+            />
+            <Rect
                 x="5%"
                 y="5%"
                 width="50%"
                 height="90%"
             />
+
             <Image
                 x="5%"
                 y="5%"
