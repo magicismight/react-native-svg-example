@@ -133,7 +133,7 @@ class TextPathExample extends Component{
                 `;
 
         return <Svg
-            height="60"
+            height="100"
             width="200"
         >
             <Defs>
@@ -167,6 +167,8 @@ class TSpanExample extends Component{
     static title = 'TSpan nest';
 
     render() {
+
+
         return <Svg
             height="160"
             width="200"

@@ -48,6 +48,7 @@ class ClipPathElement extends Component{
                             fontSize="32"
                             fonWeight="bold"
                             textAnchor="middle"
+                            scale="1.2"
                         >Q</Text>
                     </G>
                 </ClipPath>
@@ -157,7 +158,7 @@ const icon = <Svg
 >
     <Defs>
         <ClipPath id="clip">
-            <Path d="M50,5L20,99L95,39L5,39L80,99z" />
+            <Path d="M50,5L20,99L95,39L5,39L80,99z"  />
         </ClipPath>
     </Defs>
 
