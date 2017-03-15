@@ -1,7 +1,9 @@
 import React, {
     Component
 } from 'react';
-
+import {
+    View
+} from 'react-native';
 import Svg, {
     Defs,
     LinearGradient,
@@ -21,26 +23,26 @@ class LinearGradientHorizontal extends Component{
             height="150"
             width="300"
         >
+            <Ellipse cx="150" cy="75" rx="85" ry="55" fill="url(#grad)" />
             <Defs>
-                <LinearGradient id="grad" x1="65" y1="0" x2="235" y2="0">
+                <LinearGradient id="grad" x1="65" y1="0" x2="235" y2="0" gradientUnits="userSpaceOnUse">
                     <Stop offset="0" stopColor="rgb(255,255,0)" stopOpacity="0" />
                     <Stop offset="1" stopColor="red" />
                 </LinearGradient>
             </Defs>
-            <Ellipse cx="150" cy="75" rx="85" ry="55" fill="url(#grad)" />
         </Svg>;
     }
 }
 
-class LinearGradientVertical  extends Component{
-    static title = 'Define an ellipse with a vertical linear gradient from yellow to red';
+class LinearGradientRotated extends Component{
+    static title = 'Define an ellipse with a rotated linear gradient from yellow to red';
     render() {
         return <Svg
             height="150"
             width="300"
         >
             <Defs>
-                <LinearGradient id="grad" x1={0} y1={0} x2={0} y2={150}>
+                <LinearGradient id="grad" x1={0} y1={0} x2="0%" y2="100%">
                     <Stop offset="0%" stopColor="rgb(255,255,0)" stopOpacity="0" />
                     <Stop offset="100%" stopColor="red" stopOpacity="1" />
                 </LinearGradient>
@@ -51,6 +53,47 @@ class LinearGradientVertical  extends Component{
                 </G>
             </G>
         </Svg>;
+    }
+}
+
+class GradientUnits extends Component{
+    static title = 'Compare gradientUnits="userSpaceOnUse" width default';
+    render() {
+        return <View style={{width: 300, height: 150, flexDirection: 'row', justifyContent: 'space-around'}}>
+            <Svg
+                height="150"
+                width="90"
+            >
+                <Defs>
+                    <LinearGradient
+                        id="defaultUnits"
+                        x1="0%" y1="0%"
+                        x2="0%" y2="100%"
+                    >
+                        <Stop offset="0%"   stopColor="#000" stopOpacity="1"/>
+                        <Stop offset="100%" stopColor="#ff0" stopOpacity="1"/>
+                    </LinearGradient>
+                </Defs>
+                <Rect fill="url(#defaultUnits)" x="10" y="10" width="70" height="70" rx="10" ry="10"/>
+            </Svg>
+            <Svg
+                height="150"
+                width="90"
+            >
+                <Defs>
+                    <LinearGradient
+                        id="userSpaceOnUse"
+                        x1="0%" y1="0%"
+                        x2="0%" y2="100%"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <Stop offset="0%"   stopColor="#000" stopOpacity="1"/>
+                        <Stop offset="100%" stopColor="#ff0" stopOpacity="1"/>
+                    </LinearGradient>
+                </Defs>
+                <Rect fill="url(#userSpaceOnUse)" x="10" y="10" width="70" height="70" rx="10" ry="10"/>
+            </Svg>
+        </View>;
     }
 }
 
@@ -82,7 +125,7 @@ class RadialGradientExample  extends Component{
             width="300"
         >
             <Defs>
-                <RadialGradient id="grad" cx="150" cy="75" rx="85" ry="55" fx="150" fy="75">
+                <RadialGradient id="grad" cx="150" cy="75" r="85" fx="150" fy="75" gradientUnits="userSpaceOnUse">
                     <Stop
                         offset="0"
                         stopColor="#ff0"
@@ -231,7 +274,8 @@ const icon = <Svg
 
 const samples = [
     LinearGradientHorizontal,
-    LinearGradientVertical,
+    LinearGradientRotated,
+    GradientUnits,
     LinearGradientPercent,
     RadialGradientExample,
     RadialGradientPercent,

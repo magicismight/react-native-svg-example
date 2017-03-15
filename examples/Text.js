@@ -15,6 +15,7 @@ import Svg, {
 
 class TextExample extends Component{
     static title = 'Text';
+
     render() {
         return <Svg
             height="30"
@@ -64,7 +65,6 @@ class TextRotate extends Component{
     }
 }
 
-// TODO: iOS not support text stroke with pattern
 class TextStroke extends Component{
     static title = 'Stroke the text';
     render() {
@@ -74,8 +74,8 @@ class TextStroke extends Component{
         >
             <Defs>
                 <LinearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <Stop offset="100%" stopColor="red" stopOpacity="1" />
-                    <Stop offset="0%" stopColor="#000" stopOpacity="0.5" />
+                    <Stop offset="100%" stopColor="red" stopOpacity="0" />
+                    <Stop offset="0%" stopColor="blue" stopOpacity="0.5" />
                 </LinearGradient>
             </Defs>
             <Text
@@ -86,8 +86,8 @@ class TextStroke extends Component{
                 fontWeight="bold"
                 x="100"
                 y="20"
-                textAnchor="middle"
-            >STROKE TEXT</Text>
+
+            ><TSpan textAnchor="middle">STROKE TEXT</TSpan></Text>
         </Svg>;
     }
 }

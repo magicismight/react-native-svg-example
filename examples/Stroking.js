@@ -95,7 +95,7 @@ class StrokePattern  extends Component{
                     <Stop
                         offset="50%"
                         stopColor="#fff"
-                        stopOpacity="1"
+                        stopOpacity="0.5"
                     />
                     <Stop
                         offset="100%"
