@@ -87,7 +87,7 @@ class TextStroke extends Component{
                 x="100"
                 y="20"
 
-            ><TSpan textAnchor="middle">STROKE TEXT</TSpan></Text>
+            ><TSpan textAnchor="middle">{['STROKE TEXT']}</TSpan></Text>
         </Svg>;
     }
 }

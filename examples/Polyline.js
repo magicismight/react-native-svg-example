@@ -14,7 +14,7 @@ class PolylineExample extends Component{
             width="100"
         >
             <Polyline
-                points="10,10 20,12 30,20 40,60 60,70 95,90"
+                points="10 10 20 12 30 20 40 60 60 70 95 90"
                 fill="none"
                 stroke="black"
                 strokeWidth="3"
