@@ -6,8 +6,9 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^16.0.0-alpha.12",
-    "react-native": "^0.45.0",
+    "react-native": "0.45.1",
     "react-native-root-modal": "^1.0.4",
     "react-native-svg": "^5.2.0"
   }
