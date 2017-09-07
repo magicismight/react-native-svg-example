@@ -2,7 +2,8 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Path,
     Rect,
     G,
@@ -13,7 +14,7 @@ import Svg, {
     ClipPath,
     Circle,
     Text
-} from 'react-native-svg';
+} = Svg;
 
 class StrokeExample extends Component{
     static title = 'The stroke property defines the color of a line, text or outline of an element';

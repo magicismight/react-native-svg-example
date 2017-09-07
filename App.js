@@ -8,7 +8,6 @@ import React, {Component} from 'react';
 import {Dimensions} from 'react-native';
 
 import {
-    AppRegistry,
     StyleSheet,
     Text,
     View,
@@ -19,11 +18,9 @@ import {
     Easing
 } from 'react-native';
 
-import {
-    Svg,
-    Circle,
-    Line
-} from 'react-native-svg';
+import { Svg } from 'expo';
+    
+const {Circle, Line} = Svg;
 
 import * as examples from './examples';
 import 'react-native-root-modal';
@@ -116,7 +113,7 @@ const styles = StyleSheet.create({
 
 const names = ['Svg', 'Stroking', 'Path', 'Line', 'Rect', 'Polygon', 'Polyline', 'Circle', 'Ellipse', 'G', 'Text', 'Gradients', 'Clipping', 'Image', 'TouchEvents', 'PanResponder', 'Reusable'];
 
-class SvgExample extends Component {
+export default class SvgExample extends Component {
     constructor() {
         super(...arguments);
         this.state = {
@@ -261,5 +258,3 @@ class SvgExample extends Component {
         </View>;
     }
 }
-
-AppRegistry.registerComponent('SvgExample', () => SvgExample);

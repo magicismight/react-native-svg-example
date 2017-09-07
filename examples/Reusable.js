@@ -2,7 +2,8 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const  {
     Defs,
     G,
     Path,
@@ -14,7 +15,7 @@ import Svg, {
     RadialGradient,
     Stop,
     Rect
-} from 'react-native-svg';
+} = Svg;
 
 class UseExample extends Component{
     static title = 'Reuse svg code';

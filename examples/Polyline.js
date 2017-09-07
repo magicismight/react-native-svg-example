@@ -2,9 +2,10 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Polyline
-} from 'react-native-svg';
+} = Svg;
 
 class PolylineExample extends Component{
     static title = 'The <Polyline> element is used to create any shape that consists of only straight lines';

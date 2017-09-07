@@ -20,13 +20,14 @@ const styles = StyleSheet.create({
     }
 });
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Circle,
     Rect,
     Path,
     Line,
     G
-} from 'react-native-svg';
+} = Svg;
 
 class SvgExample extends Component{
     static title = 'SVG';

@@ -2,14 +2,15 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     G,
     Circle,
     Line,
     Rect,
     Text,
     Use
-} from 'react-native-svg';
+} = Svg;
 
 class GExample extends Component{
     static title = 'G children props inherit';

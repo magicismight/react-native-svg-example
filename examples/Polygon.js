@@ -2,10 +2,12 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Polygon,
-    G
-} from 'react-native-svg';
+    G,
+    Path
+} = Svg;
 
 class PolygonExample extends Component{
     static title = 'The following example creates a polygon with three sides';

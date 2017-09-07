@@ -2,12 +2,13 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Path,
     G,
     Circle,
     Text
-} from 'react-native-svg';
+} = Svg;
 
 class PathExample extends Component{
     static title = 'Path';

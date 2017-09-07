@@ -2,7 +2,8 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Text,
     LinearGradient,
     Stop,
@@ -11,7 +12,7 @@ import Svg, {
     G,
     TSpan,
     TextPath
-} from 'react-native-svg';
+} = Svg;
 
 class TextExample extends Component{
     static title = 'Text';

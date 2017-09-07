@@ -2,9 +2,10 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Circle
-} from 'react-native-svg';
+} = Svg;
 
 class CircleExample extends Component{
     static title = 'Circle';

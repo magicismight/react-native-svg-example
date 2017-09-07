@@ -1,4 +1,5 @@
 {
-  "name": "SvgExample",
-  "displayName": "SvgExample"
+  "expo": {
+    "sdkVersion": "20.0.0"
+  }
 }

@@ -2,7 +2,8 @@ import React, {
     Component
 } from 'react';
 
-import Svg, {
+import { Svg } from 'expo';
+const {
     Circle,
     Path,
     Rect,
@@ -10,7 +11,7 @@ import Svg, {
     Text,
     ClipPath,
     Defs
-} from 'react-native-svg';
+} = Svg;
 
 class PressExample extends Component {
     static title = 'Press on the red circle or long press on the blue rectangle to trigger the events';
