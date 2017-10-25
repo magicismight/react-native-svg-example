@@ -26,7 +26,7 @@ import {
 } from 'react-native-svg';
 
 import * as examples from './examples';
-import 'react-native-root-modal';
+import Modal from 'react-native-root-modal';
 
 const hairline = StyleSheet.hairlineWidth;
 
@@ -200,11 +200,9 @@ class SvgExample extends Component {
         return <View
             style={styles.container}
         >
-            <Animated.Modal
+            <Modal
                 visible={this.state.modal}
-                style={[styles.modal, {
-                    transform: [{scale: this.state.scale}]
-                }]}
+                style={[styles.modal]}
             >
                 <ScrollView
                     style={styles.scroll}
@@ -249,7 +247,7 @@ class SvgExample extends Component {
                         </Svg>
                     </TouchableOpacity>
                 </View>
-            </Animated.Modal>
+            </Modal>
             <Text style={styles.welcome}>
                 SVG library for React Native
             </Text>
