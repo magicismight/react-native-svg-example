@@ -4,6 +4,7 @@ import React, {
 
 import Svg, {
     Polygon,
+    Path,
     G
 } from 'react-native-svg';
 
