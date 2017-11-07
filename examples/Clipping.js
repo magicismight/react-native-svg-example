@@ -139,7 +139,7 @@ class TextClipping extends Component{
             </Defs>
             <Text
                 x="100"
-                y="20"
+                y="40"
                 fill="red"
                 fontSize="22"
                 fontWeight="bold"

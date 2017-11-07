@@ -85,7 +85,7 @@ class TextStroke extends Component{
                 fontSize="30"
                 fontWeight="bold"
                 x="100"
-                y="20"
+                y="40"
 
             ><TSpan textAnchor="middle">{['STROKE TEXT']}</TSpan></Text>
         </Svg>;
@@ -110,10 +110,11 @@ class TextFill extends Component{
                 fill="url(#grad)"
                 stroke="purple"
                 strokeWidth="1"
-                fontSize="20"
+                fontSize="30"
                 fontWeight="bold"
+                fontStyle="italic"
                 x="100"
-                y="20"
+                y="40"
                 textAnchor="middle"
             >FILL TEXT</Text>
         </Svg>;
@@ -197,8 +198,8 @@ const icon = <Svg
     width="20"
 >
     <Text
-        x="10"
-        y="2"
+        x="-2"
+        y="15"
         fontSize="14"
         fontWeight="bold"
         textAnchor="middle"
