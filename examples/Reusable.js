@@ -111,14 +111,14 @@ class SymbolExample extends Component{
             />
             <Use
                 href="#symbol"
-                x="0"
+                x="10"
                 y="50"
                 width="75"
                 height="38"
             />
             <Use
                 href="#symbol"
-                x="0"
+                x="20"
                 y="100"
                 width="50"
                 height="25"

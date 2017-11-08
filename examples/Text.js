@@ -198,10 +198,11 @@ const icon = <Svg
     width="20"
 >
     <Text
-        x="-2"
+        x="10"
         y="15"
         fontSize="14"
         fontWeight="bold"
+        fontFamily="PingFang HK"
         textAnchor="middle"
         fill="none"
         stroke="blue"
