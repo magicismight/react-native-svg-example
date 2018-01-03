@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>Dominant Baseline</title>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<style>
+    @font-face {
+        font-family: 'AvenirNextLTPro-Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('AvenirNextLTPro-Regular'), url('fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+    }
+</style>
+<svg width=960 height=500>
+    <line x1=10 x2=920 y1=200.5 y2=200.5 style="stroke: green"></line>
+    <text x=926 y=200.5 style="dominant-baseline:central;fill: green; font-size: 14px;">y=0</text>
+    <g class="terms" transform="translate(20,200.5)">
+        <text x=0 style="dominant-baseline: alphabetic;">(+)</text>
+        <text x=100 style="baseline-shift: -24%;">(+)</text>
+        <text x=200 style="dominant-baseline: ideographic;">(+)</text>
+        <text x=300 style="dominant-baseline: hanging;">(+)</text>
+        <text x=400 style="dominant-baseline: mathematical;">(+)</text>
+        <text x=500 style="dominant-baseline: middle;">(+)</text>
+        <text x=600 style="dominant-baseline: central;">(+)</text>
+        <text x=700 style="dominant-baseline: text-before-edge;">(+)</text>
+        <text x=800 style="dominant-baseline: text-after-edge;">(+)</text>
+    </g>
+    <g class="labels" transform="translate(50,120)" style="visibility: hidden">
+        <text>alphabetical</text>
+        <text>+ bl-shift: -24%</text>
+        <text>ideographic</text>
+        <text>hanging</text>
+        <text>mathemetical</text>
+        <text>middle</text>
+        <text>central</text>
+        <text>text-before-edge</text>
+        <text>text-after-edge</text>
+    </g>
+</svg>
+<script>
+  // Based on http://bl.ocks.org/eweitnauer/7325338
+  const size = 60;
+  setTimeout(function () {
+    d3.select('.terms')
+      .style('font-size', size + "px")
+      .style('font-family', 'AvenirNextLTPro-Regular');
+    setTimeout(function () {
+      const d = [];
+      d3.selectAll('.terms text')
+        .each(function () {
+          d.push(this.getBBox())
+        });
+      d3.selectAll('.labels text')
+        .attr('transform', function (d, i) {
+          return 'translate(' + [i * 100, 0] + ')rotate(-45)'
+        });
+      d3.select('.labels')
+        .style('visibility', 'visible');
+      d3.select('svg .terms').selectAll('rect')
+        .data(d).enter()
+        .append('rect')
+        .attr('x', function (d) {
+          return d.x
+        })
+        .attr('y', function (d) {
+          return d.y
+        })
+        .attr('width', function (d) {
+          return d.width
+        })
+        .attr('height', function (d) {
+          return d.height
+        })
+        .style('stroke', 'gray')
+        .style('stroke-dasharray', '6 6')
+        .style('fill', 'none')
+    }, 1000);
+  }, 1000);
+</script>
