@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "next": "next",
     "start": "react-native start"
   },
   "dependencies": {
+    "next": "^4.2.1",
     "prop-types": "^15.5.10",
-    "react": "^16.0.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
     "react-native": "^0.50.0",
     "react-native-root-modal": "^1.0.4",
-    "react-native-svg": "^6.0.0-rc12"
+    "react-native-svg": "msand/react-native-svg#b9d37ac",
+    "svgs": "^3.1.1"
   }
 }

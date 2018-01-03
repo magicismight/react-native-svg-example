@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const names = ['Svg', 'Stroking', 'Path', 'Line', 'Rect', 'Polygon', 'Polyline', 'Circle', 'Ellipse', 'G', 'Text', 'Gradients', 'Clipping', 'Image', 'TouchEvents', 'PanResponder', 'Reusable'];
+const names = ['Svg', 'Stroking', 'Path', 'Line', 'Rect', 'Polygon', 'Polyline', 'Circle', 'Ellipse', 'G', 'Text', 'Gradients', 'Clipping', 'Image', 'TouchEvents', 'PanResponder', 'Reusable', 'SpecTests'];
 
 class SvgExample extends Component {
     constructor() {
