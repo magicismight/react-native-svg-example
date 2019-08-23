@@ -135,5 +135,3 @@ export {
     icon,
     samples
 };
-
-
